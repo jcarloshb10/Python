@@ -1,0 +1,16 @@
+"""Pedro es un estudiante inteligente pero desinteresado por algunas de sus materias. A Pedro le gustan las clases en las que aprende programación, matemática, filosofía y literatura. Por lo anterior, cualquier materia que lleve en su título alguna de estas palabras, será de su agrado.
+
+Pedro está planeando su horario, pero ha puesto a su asistente digital a que le dé posibles conjuntos de tres materias para inscribir en su semestre. Él quiere saber, dados los títulos de las tres materias, cuántas de estas son de su agrado. Se sabe que los nombres de las materias irán sin acentos y en minúsculas cuando sean recibidos por parámetro en la función.
+
+ """
+
+
+def conteo_de_materias(nombre_materia_1:str,nombre_materia_2:str,nombre_materia_3:str)->int:
+    respuesta=0
+    if "programacion" in nombre_materia_1 or "matematica" in nombre_materia_1 or "filosofia" in nombre_materia_1 or "literatura" in nombre_materia_1:
+        respuesta = respuesta +1
+    if "programacion" in nombre_materia_2 or "matematica" in nombre_materia_2 or "filosofia" in nombre_materia_2 or "literatura" in nombre_materia_2:
+        respuesta = respuesta +1
+    if "programacion" in nombre_materia_3 or "matematica" in nombre_materia_3 or "filosofia" in nombre_materia_3 or "literatura" in nombre_materia_3:
+        respuesta = respuesta +1
+    return respuesta

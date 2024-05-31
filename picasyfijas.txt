@@ -1,0 +1,12 @@
+def picas_y_fijas(numero_secreto:int, intento:int)->dict:
+    diccionario={}
+    num1 = numero_secreto%10
+    if numero_secreto == intento:
+        diccionario["FIJAS"]=4
+        diccionario["PICAS"]=0
+    if num1 in str(intento):
+        if str(numero_secreto[3]).find()==str(intento.find()):
+            diccionario["FICAS"]+=1
+        else:
+            diccionario["PIJAS"]+=1
+    return diccionario

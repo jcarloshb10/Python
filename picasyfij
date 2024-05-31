@@ -1,0 +1,26 @@
+def picas_y_fijas(numero_secreto:int, intento:int)->dict:
+    diccionario = {"FIJAS": 0, "PICAS": 0}
+
+    num = str(numero_secreto)
+    num2 = str(intento)
+    if numero_secreto == intento:
+        diccionario["FIJAS"]=4
+        diccionario["PICAS"]=0
+        print("Son iguales")
+    else:
+        i=0
+        numaux = str(intento)
+        while(i<4):
+            
+            #numaux = str(intento)
+            num1 = str(int(numaux)%10)
+            if num1 in num:
+                if num[3-i] == num2[3-i]:
+                    diccionario["FIJAS"] += 1
+                else:
+                    diccionario["PICAS"] += 1
+            numaux = str(int(numaux)//10)
+            i+=1
+    return diccionario
+
+print(picas_y_fijas(1234,1235))
