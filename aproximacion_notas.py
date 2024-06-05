@@ -26,3 +26,4 @@ lista_estudiantes = [
 ]
 
 print(calcular_definitivas(lista_estudiantes))
+
